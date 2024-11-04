@@ -31,6 +31,8 @@ def delete_task(task_id):
     global tasks
     tasks = [task for task in tasks if task['id'] != task_id]
     return jsonify({'result': 'success'})
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)  # Use host='0.0.0.0' and port=5001    
+
+#if __name__ == '__main__':
+ #   app.run(debug=True)
